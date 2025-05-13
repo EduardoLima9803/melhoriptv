@@ -195,19 +195,19 @@
     </div>
   </section>
 
-  <section>
+  <section id="planos">
     <h2>Planos de Assinatura</h2>
     <div class="planos">
       <div class="plano">
         <h3>Plano Mensal</h3>
-        <p>R$ 49,90/mês</p>
+        <p>R$ 35,00/mês</p>
         <p>+12.000 Canais</p>
         <p>+30.000 Filmes e Séries</p>
         <a href="#">Assine Agora</a>
       </div>
       <div class="plano">
         <h3>Plano Anual</h3>
-        <p>R$ 499,00/ano</p>
+        <p>R$ 350,00/ano</p>
         <p>+12.000 Canais</p>
         <p>+30.000 Filmes e Séries</p>
         <a href="#">Assine Agora</a>
@@ -237,5 +237,11 @@
       freeMode: true,
     });
   </script>
+
+<script>
+  function scrollToPlans() {
+    document.getElementById("planos").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
 </body>
 </html>
