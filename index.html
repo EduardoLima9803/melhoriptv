@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MelhorTV IPTV</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <style>
@@ -74,7 +74,6 @@
       border-radius: 1rem;
       text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
     }
     .whatsapp-float {
       position: fixed;
@@ -139,6 +138,16 @@
       color: #38bdf8;
       margin-bottom: 1rem;
     }
+    .plano a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -178,30 +187,6 @@
   </section>
 
   <section>
-    <h2>Vantagens do IPTV</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Atualizações Diárias</h3>
-        <p>Filmes e séries adicionados todos os dias, com lançamentos atualizados.</p>
-      </div>
-      <div class="card">
-        <h3>Qualidade HD e 4K</h3>
-        <p>Assista seus canais e filmes com qualidade de imagem superior em HD e 4K.</p>
-      </div>
-      <div class="card">
-        <h3>Multi-dispositivos</h3>
-        <p>Assista onde quiser! O MelhorTV IPTV é compatível com Smart TVs, celulares, tablets e muito mais.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Botão de chamada para ver planos -->
-  <section class="cta">
-    <a onclick="scrollToPlans()">Ver Planos</a>
-  </section>
-
-  <!-- Seção com ID para rolar até -->
-  <section id="planos">
     <h2>Planos de Assinatura</h2>
     <div class="planos">
       <div class="plano">
@@ -209,39 +194,44 @@
         <p>R$ 35,00/mês</p>
         <p>+12.000 Canais</p>
         <p>+30.000 Filmes e Séries</p>
-        <a href="#">Assine Agora</a>
+        <a href="https://wa.me/5511999999999" target="_blank">Assine Agora</a>
       </div>
       <div class="plano">
         <h3>Plano Anual</h3>
         <p>R$ 350,00/ano</p>
         <p>+12.000 Canais</p>
         <p>+30.000 Filmes e Séries</p>
-        <a href="#">Assine Agora</a>
+        <a href="https://wa.me/5511999999999" target="_blank">Assine Agora</a>
       </div>
     </div>
   </section>
 
-  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">💬</a>
+  <a class="whatsapp-float" href="https://wa.me/5511999999999" target="_blank">💬</a>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
-    const swiperCanal = new Swiper('.canal-swiper', {
-      slidesPerView: 'auto',
+    const swiper1 = new Swiper('.canal-swiper', {
+      slidesPerView: 3,
       spaceBetween: 10,
       loop: true,
-      freeMode: true,
+      autoplay: { delay: 2500 },
+      breakpoints: {
+        640: { slidesPerView: 4 },
+        768: { slidesPerView: 5 },
+        1024: { slidesPerView: 6 }
+      }
     });
-
-    const swiperFilmes = new Swiper('.filmes-swiper', {
-      slidesPerView: 'auto',
+    const swiper2 = new Swiper('.filmes-swiper', {
+      slidesPerView: 2,
       spaceBetween: 10,
       loop: true,
-      freeMode: true,
+      autoplay: { delay: 2500 },
+      breakpoints: {
+        640: { slidesPerView: 3 },
+        768: { slidesPerView: 4 },
+        1024: { slidesPerView: 5 }
+      }
     });
-
-    function scrollToPlans() {
-      document.getElementById("planos").scrollIntoView({ behavior: "smooth" });
-    }
   </script>
 </body>
 </html>
