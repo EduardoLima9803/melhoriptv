@@ -74,6 +74,7 @@
       border-radius: 1rem;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
     .whatsapp-float {
       position: fixed;
@@ -154,7 +155,6 @@
         <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/SBT_logo_2023.svg" alt="SBT"></div>
         <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/2/25/RecordTV_logo_2016.svg" alt="Record"></div>
         <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Band_logo_2017.svg" alt="Band"></div>
-        <!-- Novos canais -->
         <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Telecine_logo_2020.svg" alt="Telecine"></div>
         <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/HBO_logo_2019.svg" alt="HBO"></div>
         <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/2/23/MTV_Logo.svg" alt="MTV"></div>
@@ -170,7 +170,6 @@
         <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/81d8y7WYpOL._AC_UF894,1000_QL80_.jpg" alt="Filme 2"></div>
         <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/81FNYy7MwIL._AC_UF894,1000_QL80_.jpg" alt="Filme 3"></div>
         <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/71qJp5c9EvL._AC_UF894,1000_QL80_.jpg" alt="Filme 4"></div>
-        <!-- Novos filmes -->
         <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/91St2y8DXbL._AC_UF894,1000_QL80_.jpg" alt="Filme 5"></div>
         <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/71gqXJf4zGL._AC_UF894,1000_QL80_.jpg" alt="Filme 6"></div>
         <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/81pS1C-xoLL._AC_UF894,1000_QL80_.jpg" alt="Filme 7"></div>
@@ -182,19 +181,26 @@
     <h2>Vantagens do IPTV</h2>
     <div class="cards">
       <div class="card">
-      <h3>Atualizações Diárias</h3>
-      <p>Filmes e séries adicionados todos os dias, com lançamentos atualizados.</p>
-    </div>
-    <div class="card">
-      <h3>Qualidade HD e 4K</h3>
-      <p>Assista seus canais e filmes com qualidade de imagem superior em HD e 4K.</p>
-    </div>
-    <div class="card">
-      <h3>Multi-dispositivos</h3>
-      <p>Assista onde quiser! O MelhorTV IPTV é compatível com Smart TVs, celulares, tablets e muito mais.</p>
+        <h3>Atualizações Diárias</h3>
+        <p>Filmes e séries adicionados todos os dias, com lançamentos atualizados.</p>
+      </div>
+      <div class="card">
+        <h3>Qualidade HD e 4K</h3>
+        <p>Assista seus canais e filmes com qualidade de imagem superior em HD e 4K.</p>
+      </div>
+      <div class="card">
+        <h3>Multi-dispositivos</h3>
+        <p>Assista onde quiser! O MelhorTV IPTV é compatível com Smart TVs, celulares, tablets e muito mais.</p>
+      </div>
     </div>
   </section>
 
+  <!-- Botão de chamada para ver planos -->
+  <section class="cta">
+    <a onclick="scrollToPlans()">Ver Planos</a>
+  </section>
+
+  <!-- Seção com ID para rolar até -->
   <section id="planos">
     <h2>Planos de Assinatura</h2>
     <div class="planos">
@@ -215,10 +221,6 @@
     </div>
   </section>
 
-  <section class="cta">
-    <a href="#">Assine Agora e Tenha o Melhor da TV!</a>
-  </section>
-
   <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">💬</a>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -236,12 +238,10 @@
       loop: true,
       freeMode: true,
     });
-  </script>
 
-<script>
-  function scrollToPlans() {
-    document.getElementById("planos").scrollIntoView({ behavior: "smooth" });
-  }
-</script>
+    function scrollToPlans() {
+      document.getElementById("planos").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 </body>
 </html>
