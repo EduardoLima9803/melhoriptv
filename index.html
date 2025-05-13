@@ -1,68 +1,241 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melhor IPTV</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>MelhorTV IPTV</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+    header {
+      background: linear-gradient(to right, #0ea5e9, #22d3ee);
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+    }
+    section {
+      padding: 2rem;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .swiper {
+      width: 100%;
+      padding-bottom: 2rem;
+    }
+    .swiper-slide {
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 0;
+    }
+    .cards {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background-color: #1e293b;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #38bdf8;
+    }
+    .cta {
+      text-align: center;
+      padding: 3rem;
+    }
+    .cta a {
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      text-decoration: none;
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .contador, .beneficios-contador {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #38bdf8;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .depoimentos, .faq {
+      margin-top: 3rem;
+    }
+    .depoimento, .faq-item {
+      background-color: #1e293b;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .faq-item h3 {
+      color: #38bdf8;
+      cursor: pointer;
+    }
+    .faq-item p {
+      color: #f8fafc;
+      display: none;
+      padding-top: 10px;
+    }
+    .vantagens, .planos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .vantagem, .plano {
+      background-color: #1e293b;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    .vantagem h3, .plano h3 {
+      color: #38bdf8;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Planos</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
+    <h1>MelhorTV IPTV</h1>
+    <p>+12.000 Canais e +30.000 Filmes e Séries com qualidade HD e 4K</p>
   </header>
 
-  <section class="hero">
-    <h1>Assista TV ao vivo com os melhores planos</h1>
-    <p>Com acesso a uma vasta gama de canais de TV ao vivo, filmes e séries</p>
-  </section>
-
-  <section class="carousel">
-    <h2>Novos Lançamentos</h2>
-    <div class="carousel-container">
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/300x450" alt="Filme 1">
-        <p>Filme 1</p>
-      </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/300x450" alt="Filme 2">
-        <p>Filme 2</p>
-      </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/300x450" alt="Filme 3">
-        <p>Filme 3</p>
+  <section>
+    <h2>Logos de Canais</h2>
+    <div class="swiper canal-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Globo_logo_2022.svg" alt="Globo"></div>
+        <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/SBT_logo_2023.svg" alt="SBT"></div>
+        <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/2/25/RecordTV_logo_2016.svg" alt="Record"></div>
+        <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Band_logo_2017.svg" alt="Band"></div>
+        <!-- Novos canais -->
+        <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Telecine_logo_2020.svg" alt="Telecine"></div>
+        <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/HBO_logo_2019.svg" alt="HBO"></div>
+        <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/2/23/MTV_Logo.svg" alt="MTV"></div>
       </div>
     </div>
   </section>
 
-  <section class="channels">
-    <h2>Canais de TV</h2>
-    <div class="channels-list">
-      <div class="channel-card">
-        <img src="https://via.placeholder.com/100x100" alt="Logo Canal 1">
-        <p>Canal 1</p>
-      </div>
-      <div class="channel-card">
-        <img src="https://via.placeholder.com/100x100" alt="Logo Canal 2">
-        <p>Canal 2</p>
-      </div>
-      <div class="channel-card">
-        <img src="https://via.placeholder.com/100x100" alt="Logo Canal 3">
-        <p>Canal 3</p>
+  <section>
+    <h2>Capas de Filmes</h2>
+    <div class="swiper filmes-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_UF894,1000_QL80_.jpg" alt="Filme 1"></div>
+        <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/81d8y7WYpOL._AC_UF894,1000_QL80_.jpg" alt="Filme 2"></div>
+        <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/81FNYy7MwIL._AC_UF894,1000_QL80_.jpg" alt="Filme 3"></div>
+        <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/71qJp5c9EvL._AC_UF894,1000_QL80_.jpg" alt="Filme 4"></div>
+        <!-- Novos filmes -->
+        <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/91St2y8DXbL._AC_UF894,1000_QL80_.jpg" alt="Filme 5"></div>
+        <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/71gqXJf4zGL._AC_UF894,1000_QL80_.jpg" alt="Filme 6"></div>
+        <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/81pS1C-xoLL._AC_UF894,1000_QL80_.jpg" alt="Filme 7"></div>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Melhor IPTV | Todos os direitos reservados.</p>
-  </footer>
+  <section>
+    <h2>Vantagens do IPTV</h2>
+    <div class="cards">
+      <div class="card">
+      <h3>Atualizações Diárias</h3>
+      <p>Filmes e séries adicionados todos os dias, com lançamentos atualizados.</p>
+    </div>
+    <div class="card">
+      <h3>Qualidade HD e 4K</h3>
+      <p>Assista seus canais e filmes com qualidade de imagem superior em HD e 4K.</p>
+    </div>
+    <div class="card">
+      <h3>Multi-dispositivos</h3>
+      <p>Assista onde quiser! O MelhorTV IPTV é compatível com Smart TVs, celulares, tablets e muito mais.</p>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <section>
+    <h2>Planos de Assinatura</h2>
+    <div class="planos">
+      <div class="plano">
+        <h3>Plano Mensal</h3>
+        <p>R$ 49,90/mês</p>
+        <p>+12.000 Canais</p>
+        <p>+30.000 Filmes e Séries</p>
+        <a href="#">Assine Agora</a>
+      </div>
+      <div class="plano">
+        <h3>Plano Anual</h3>
+        <p>R$ 499,00/ano</p>
+        <p>+12.000 Canais</p>
+        <p>+30.000 Filmes e Séries</p>
+        <a href="#">Assine Agora</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <a href="#">Assine Agora e Tenha o Melhor da TV!</a>
+  </section>
+
+  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">💬</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiperCanal = new Swiper('.canal-swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      loop: true,
+      freeMode: true,
+    });
+
+    const swiperFilmes = new Swiper('.filmes-swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      loop: true,
+      freeMode: true,
+    });
+  </script>
 </body>
 </html>
