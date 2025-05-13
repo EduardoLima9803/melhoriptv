@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#home {
+  background-color: #333;
+  color: white;
+}
+
+#planos {
+  background-color: #fff;
+}
+
+.plano {
+  display: inline-block;
+  width: 22%;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#contato {
+  background-color: #333;
+  color: white;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
