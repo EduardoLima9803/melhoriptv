@@ -1,7 +1,4 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  build: {
-    outDir: 'dist',
-  },
+// JS para funcionalidades interativas, como o carrossel de filmes
+document.querySelector('.carousel-container').addEventListener('scroll', function() {
+  // Adicionar animações de rolagem ou efeitos
 });

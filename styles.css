@@ -1,68 +1,87 @@
-* {
+body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
 header {
   background-color: #333;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
+  padding: 1rem;
 }
 
 header nav ul {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 header nav ul li {
   display: inline;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 header nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: 600;
 }
 
-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#home {
-  background-color: #333;
+.hero {
+  background-color: #222;
   color: white;
+  text-align: center;
+  padding: 50px 20px;
 }
 
-#planos {
+.carousel {
+  padding: 20px;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: space-around;
+  overflow: auto;
+}
+
+.carousel-item {
+  text-align: center;
+  margin: 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.channels {
+  padding: 20px;
   background-color: #fff;
 }
 
-.plano {
-  display: inline-block;
-  width: 22%;
-  margin: 0 10px;
-  padding: 20px;
-  background-color: #eee;
-  border-radius: 8px;
-  text-align: center;
+.channels-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-#contato {
-  background-color: #333;
-  color: white;
+.channel-card {
+  text-align: center;
+  width: 120px;
+  margin: 15px;
+}
+
+.channel-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 footer {
-  background-color: #111;
+  background-color: #333;
   color: white;
-  padding: 10px 0;
   text-align: center;
+  padding: 10px;
 }
